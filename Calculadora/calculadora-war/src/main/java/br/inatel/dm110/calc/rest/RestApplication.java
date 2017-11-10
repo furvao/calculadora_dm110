@@ -8,7 +8,7 @@ import javax.ws.rs.core.Application;
 
 import br.inatel.dm110.calc.core.CalculadoraServiceImpl;
 
-@ApplicationPath("/api")
+@ApplicationPath("/rest")
 public class RestApplication extends Application {
 
 	@Override
