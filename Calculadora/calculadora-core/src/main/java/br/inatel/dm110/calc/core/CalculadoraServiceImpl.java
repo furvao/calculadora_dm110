@@ -19,11 +19,13 @@ public class CalculadoraServiceImpl implements CalculadoraService {
 	}
 
 	@Override
-	public Response subtract(String first, String second) {
+	public Response subtract(int first, int second) {
 		Result result = new Result();
-		result.setFirst(first);
-		result.setSecond(second);
-		result.setResult(String.valueOf(Integer.parseInt(first) - Integer.parseInt(second)));
+		result.setFirst(String.valueOf(first));
+		result.setSecond(String.valueOf(second));
+		System.out.println(first);
+		System.out.println(second);
+		result.setResult(String.valueOf(first-second));
 
 		return Response.ok().entity(result).build();
 	}

@@ -13,13 +13,13 @@ import javax.ws.rs.core.Response;
 public interface CalculadoraService {
 
 	@GET
-	@Path("/sum/{first}/{seconde}")
+	@Path("/sum")
 	@Produces(MediaType.APPLICATION_JSON)
 	Response sum(@QueryParam("first") String first, @QueryParam("second") String second);
 
 	@POST
 	@Path("/subtract")
 	@Produces(MediaType.APPLICATION_JSON)
-	Response subtract(@FormParam("first") String first, @FormParam("second") String second);
+	Response subtract(@FormParam("first") int first, @FormParam("second") int second);
 
 }
