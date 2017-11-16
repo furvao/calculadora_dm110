@@ -1,0 +1,1 @@
+include "dm110-usuario-ear", "dm110-usuario-war", "dm110-usuario-api", "dm110-usuario-impl", "dm110-usuario-ejb", "dm110-usuario-ejb-client"
