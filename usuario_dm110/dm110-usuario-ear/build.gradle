@@ -13,7 +13,7 @@ ear {
 		def warName = project(':dm110-usuario-war').name
 		def warVersion = project(':dm110-usuario-war').version
 		def warFileName = warName + '-' + warVersion + '.war'
-		webModule(warFileName, 'dm110-usuario')
+		webModule(warFileName, 'cadastro')
 		
 		def ejbName = project(':dm110-usuario-ejb').name
 		def ejbVersion = project(':dm110-usuario-ejb').version

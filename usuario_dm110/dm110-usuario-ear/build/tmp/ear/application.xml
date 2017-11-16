@@ -3,7 +3,7 @@
   <module>
     <web>
       <web-uri>dm110-usuario-war-0.1-SNAPSHOT.war</web-uri>
-      <context-root>dm110-usuario</context-root>
+      <context-root>cadastro</context-root>
     </web>
   </module>
   <module>

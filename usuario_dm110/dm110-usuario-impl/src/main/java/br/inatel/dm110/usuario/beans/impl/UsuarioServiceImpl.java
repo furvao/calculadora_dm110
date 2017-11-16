@@ -3,6 +3,7 @@ package br.inatel.dm110.usuario.beans.impl;
 import java.util.List;
 
 import javax.ejb.EJB;
+import javax.enterprise.context.RequestScoped;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 
@@ -10,9 +11,10 @@ import br.inatel.dm110.usuario.api.UsuarioService;
 import br.inatel.dm110.usuario.api.to.UsuarioTO;
 import br.inatel.dm110.usuario.interfaces.UsuarioRemote;
 
+@RequestScoped
 public class UsuarioServiceImpl implements UsuarioService {
 
-	@EJB(lookup = "java:app/dm110-ejb-0.1-SNAPSHOT/UsuarioBean!br.inatel.dm110.hello.interfaces.InventoryRemote")
+	@EJB(lookup = "java:app/dm110-usuario-ejb-0.1-SNAPSHOT/UsuarioBean!br.inatel.dm110.usuario.interfaces.UsuarioRemote")
 	private UsuarioRemote usuarioRemote;
 
 	@Override
@@ -50,7 +52,7 @@ public class UsuarioServiceImpl implements UsuarioService {
 
 		UsuarioTO uUpdated = null;
 
-		if (id == usuarioTO.getId()) {
+		if (id == usuarioTO.getId().longValue()) {
 			try {
 				uUpdated = usuarioRemote.updateUser(usuarioTO);
 				return Response.accepted().entity(uUpdated).build();
